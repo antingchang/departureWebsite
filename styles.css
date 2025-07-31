@@ -188,10 +188,11 @@ body {
 /* Responsive YouTube iframe inside About section */
 .about-content .about-video {
     display: block;
-    width: 100%;            /* fills the paragraph column */
-    max-width: 100%;        /* never wider than the text container */
-    aspect-ratio: 16 / 9;   /* keeps correct video shape */
-    margin: 2.5rem auto 0;  /* space above, centered horizontally */
+    width: 100% !important;      /* overrides any leftover inline width  */
+    max-width: 100%;
+    aspect-ratio: 16 / 9;        /* keeps the video’s shape              */
+    height: auto !important;     /* overrides any leftover inline height */
+    margin: 2rem auto 0;         /* top space + centred horizontally     */
     border: none;
 }
 /* Full-width, centred YouTube video inside the About section */

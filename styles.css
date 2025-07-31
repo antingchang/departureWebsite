@@ -524,7 +524,7 @@ html {
 .nav-brand {
     display: flex;
     align-items: center;
-    height: 128px;
+    height: 64px;
     overflow: hidden;
     max-width: 600px;
     margin-left: 0 !important;
@@ -532,9 +532,9 @@ html {
 }
 
 .nav-brand img {
-    height: 128px !important;
-    max-height: 128px !important;
-    width: auto !important;
+    height: 64px;
+    max-height: 64px;
+    width: auto;
     max-width: 600px !important;
     display: block;
     margin: 0 !important;

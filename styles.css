@@ -562,7 +562,7 @@ html {
     background: var(--primary-black);
 }
 
-.hero-bg-video iframe iframe {
+.hero-bg-video iframe {
     position: absolute;
     top: 0;
     left: 0;

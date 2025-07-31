@@ -243,7 +243,7 @@ body {
 
 /* People Section */
 
-#people-content {
+.people-content {
     max-width: 1067px;
     margin: 0 auto;
     text-align: left;

@@ -12,6 +12,10 @@
 }
 
 /* Reset and base styles */
+/* Global colour palette */
+:root {
+    --primary-black: #000000;   /* Pure black that matches the video letterbox */
+}
 * {
     margin: 0;
     padding: 0;

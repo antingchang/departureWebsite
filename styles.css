@@ -185,6 +185,15 @@ body {
     margin: 0 auto;
     text-align: left;
 }
+/* Responsive YouTube iframe inside About section */
+.about-content .about-video {
+    display: block;
+    width: 100%;            /* fills the paragraph column */
+    max-width: 100%;        /* never wider than the text container */
+    aspect-ratio: 16 / 9;   /* keeps correct video shape */
+    margin: 2.5rem auto 0;  /* space above, centered horizontally */
+    border: none;
+}
 
 #about {
     background-image: url('assets/images/AboutImage.jpg');

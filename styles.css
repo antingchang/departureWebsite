@@ -194,6 +194,16 @@ body {
     margin: 2.5rem auto 0;  /* space above, centered horizontally */
     border: none;
 }
+/* Full-width, centred YouTube video inside the About section */
+.about-content iframe,
+.about-content .about-video {
+    display: block;
+    width: 100%;
+    max-width: 100%;      /* never wider than .about-content itself */
+    aspect-ratio: 16 / 9; /* keeps 16×9 shape without a fixed height  */
+    margin: 2rem auto 0;  /* space above, centred horizontally        */
+    border: none;
+}
 
 #about {
     background-image: url('assets/images/AboutImage.jpg');

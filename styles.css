@@ -123,7 +123,7 @@ body {
     position: relative;
     overflow: hidden;
     min-height: 100vh;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -141,7 +141,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.25rem;#000000;   
     color: #666;
     max-width: 600px;
     margin: 0 auto;
@@ -554,50 +554,28 @@ html {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 0;
     overflow: hidden;
     pointer-events: none;
     background: var(--primary-black);
 }
 
-.hero-bg-video iframe {
+.hero-bg-video iframe iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    min-width: 100vw;
-    min-height: 100vh;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover;      /* Crops evenly, fills every pixel */
     border: none;
     pointer-events: none;
-    z-index: 0;
     background: var(--primary-black);
 }
 
-/* Hide YouTube branding elements */
-.hero-bg-video iframe {
-    filter: brightness(1) contrast(1);
-}
-
-/* Additional CSS to hide YouTube elements */
-.hero-bg-video iframe::-webkit-media-controls {
-    display: none !important;
-}
-
-.hero-bg-video iframe::-webkit-media-controls-panel {
-    display: none !important;
-}
-
-.hero-bg-video iframe::-webkit-media-controls-play-button {
-    display: none !important;
-}
-
-.hero-bg-video iframe::-webkit-media-controls-start-playback-button {
-    display: none !important;
-}
 
 .hero .container {
     position: relative;

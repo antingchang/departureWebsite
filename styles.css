@@ -364,37 +364,6 @@ a:focus {
 
 /* Contact Section */
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.contact-info h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.contact-info p {
-    color: #666;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.contact-details {
-    margin-top: 2rem;
-}
-
-.contact-details p {
-    margin-bottom: 0.5rem;
-    color: #555;
-}
-
-/* Contact Form */
-.contact-content {
     max-width: 1067px;
     margin: 0 auto;
     text-align: left;
@@ -437,7 +406,18 @@ a:focus {
 .contact-content a:hover {
     color: #B5B5B5;
 }
+/* Extra breathing-room so the background images show through */
+#tour.section,
+#contact.section {
+    padding: 8rem 0;        /* was 5rem 0 by default */
+}
 
+@media (max-width: 768px) {
+    #tour.section,
+    #contact.section {
+        padding: 6rem 0;    /* still more generous than the old 5rem 0 */
+    }
+}
 /* Footer */
 .footer {
     background: var(--primary-black);

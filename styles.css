@@ -566,21 +566,26 @@ html {
     background: var(--primary-black);
 }
 
+/* Vimeo iframe – stretches whichever side is too short so it ALWAYS fills */
 .hero-bg-video iframe {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);   /* keep the video centred */
 
-    /* Make whichever side is too small grow until both axes cover the viewport */
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    /* 16 : 9 maths  →  height = 56.25 % of the width                     */
+    width: 100vw;
+    height: 56.25vw;
+
+    /* …but if that isn’t tall enough, grow it until height = 100 vh      */
+    min-height: 100vh;                  /* guarantees top-to-bottom cover */
+    min-width: 177.78vh;                /* 100 vh × (16 / 9)               */
 
     border: none;
     pointer-events: none;
-    background: var(--primary-black);}
+    background: var(--primary-black);
+}
+
 /* --- 2025/26 Tour button --------------------------------------------------- */
 .hero-tour-button {
     position: absolute;

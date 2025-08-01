@@ -307,56 +307,39 @@ body {
     color: #B5B5B5;
 }
 
-/* Works Section */
-.works-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
+/* tour Section */
+
+.tour-content {
+    max-width: 1067px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-.work-item {
-    background: #f8f9fa;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.work-image {
-    height: 200px;
-    background: #e9ecef;
+#tour {
+    background-image: url('assets/images/AnTing.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     position: relative;
 }
 
-.image-placeholder {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2rem;
-    font-weight: 300;
+#tour::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
-.work-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 1.5rem 1.5rem 0.5rem;
-    color: #333;
+#tour .container {
+    position: relative;
+    z-index: 2;
 }
 
-.work-description {
-    color: #666;
-    margin: 0 1.5rem 1.5rem;
-    line-height: 1.6;
-}
 
 /* Contact Section */
 .contact-content {

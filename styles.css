@@ -173,33 +173,7 @@ a:focus {
     display: block;
     margin: 0 auto;
 }
-/* “2025/26 Tour” button on the hero */
-.hero-tour-button {
-    display: inline-block;
-    pointer-events: auto;       /* clickable even though hero’s video is pointer-events:none */
-    transition: transform 0.3s ease;
-}
 
-.hero-tour-button img {
-    width: 220px;               /* desktop size – tweak if needed */
-    height: auto;
-}
-
-.hero-tour-button:hover,
-.hero-tour-button:focus-visible {
-    transform: scale(1.05);
-}
-
-/* centre the button near the bottom of the hero */
-.hero .container {
-    /* already: display:flex; flex-direction:column; justify-content:flex-end; align-items:center; */
-}
-
-@media (max-width: 768px) {
-    .hero-tour-button img {
-        width: 160px;           /* smaller on tablets/phones */
-    }
-}
 /* Sections */
 .section {
     padding: 5rem 0;
@@ -603,12 +577,38 @@ html {
     pointer-events: none;
     background: var(--primary-black);
 }
+/* --- 2025/26 Tour button --------------------------------------------------- */
+.hero-tour-button {
+    position: absolute;
+    left: 50%;
+    bottom: 12vh;            /* raises it ~12 % of the viewport from bottom */
+    transform: translateX(-50%);
+    z-index: 5;              /* sits above the video (video is z-index:0)   */
+    pointer-events: auto;
+    transition: transform 0.3s ease;
+}
 
+.hero-tour-button img {
+    width: 220px;            /* desktop size */
+    height: auto;
+    display: block;
+}
+
+.hero-tour-button:hover,
+.hero-tour-button:focus-visible {
+    transform: translateX(-50%) scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .hero-tour-button img {
+        width: 160px;
+    }
+}
 
 .hero .container {
     position: relative;
     z-index: 2;
-    width: 100vw;
+    width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;

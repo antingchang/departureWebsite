@@ -37,7 +37,16 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+/* Global link colours */
+a,
+a:visited {
+    color: #FFFFFF;      /* white links everywhere */
+}
 
+a:hover,
+a:focus {
+    color: #CCCCCC;      /* subtle grey on hover/focus so users know it’s interactive */
+}
 /* Header and Navigation */
 .header {
     position: absolute;

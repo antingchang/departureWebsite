@@ -312,11 +312,11 @@ body {
 .tour-content {
     max-width: 1067px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 #tour {
-    background-image: url('assets/images/AnTing.jpg');
+    background-image: url('assets/images/Tour.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

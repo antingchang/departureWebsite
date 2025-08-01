@@ -194,26 +194,7 @@ a:focus {
     margin: 0 auto;
     text-align: left;
 }
-/* Responsive YouTube iframe inside About section */
-.about-content .about-video {
-    display: block;
-    width: 100% !important;      /* overrides any leftover inline width  */
-    max-width: 100%;
-    aspect-ratio: 16 / 9;        /* keeps the video’s shape              */
-    height: auto !important;     /* overrides any leftover inline height */
-    margin: 2rem auto 0;         /* top space + centred horizontally     */
-    border: none;
-}
-/* Full-width, centred YouTube video inside the About section */
-.about-content iframe,
-.about-content .about-video {
-    display: block;
-    width: 100%;
-    max-width: 100%;      /* never wider than .about-content itself */
-    aspect-ratio: 16 / 9; /* keeps 16×9 shape without a fixed height  */
-    margin: 2rem auto 0;  /* space above, centred horizontally        */
-    border: none;
-}
+
 
 #about {
     background-image: url('assets/images/AboutImage.jpg');
@@ -270,6 +251,26 @@ a:focus {
     text-shadow: 1px 1px 37px rgba(0,0,0,0.9), 2px 2px 4px rgba(0,0,0,0.8);
 }
 
+/* Responsive YouTube iframe inside About section */
+.trailer-content .trailer-video {
+    display: block;
+    width: 100% !important;      /* overrides any leftover inline width  */
+    max-width: 100%;
+    aspect-ratio: 16 / 9;        /* keeps the video’s shape              */
+    height: auto !important;     /* overrides any leftover inline height */
+    margin: 2rem auto 0;         /* top space + centred horizontally     */
+    border: none;
+}
+/* Full-width, centred YouTube video inside the About section */
+.trailer-content iframe,
+.trailer-content .trailer-video {
+    display: block;
+    width: 100%;
+    max-width: 100%;      /* never wider than .about-content itself */
+    aspect-ratio: 16 / 9; /* keeps 16×9 shape without a fixed height  */
+    margin: 2rem auto 0;  /* space above, centred horizontally        */
+    border: none;
+}
 /* People Section */
 
 .people-content {

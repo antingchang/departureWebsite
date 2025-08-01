@@ -339,7 +339,18 @@ body {
     position: relative;
     z-index: 2;
 }
+.tour-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    color: #B5B5B5;
+    line-height: 1.8;
+    text-shadow: 1px 1px 37px rgba(0,0,0,0.9), 2px 2px 4px rgba(0,0,0,0.8);
+}
 
+
+.tour-content a:hover {
+    color: #B5B5B5;
+}
 
 /* Contact Section */
 .contact-content {

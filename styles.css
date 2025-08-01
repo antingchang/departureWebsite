@@ -173,7 +173,33 @@ a:focus {
     display: block;
     margin: 0 auto;
 }
+/* “2025/26 Tour” button on the hero */
+.hero-tour-button {
+    display: inline-block;
+    pointer-events: auto;       /* clickable even though hero’s video is pointer-events:none */
+    transition: transform 0.3s ease;
+}
 
+.hero-tour-button img {
+    width: 220px;               /* desktop size – tweak if needed */
+    height: auto;
+}
+
+.hero-tour-button:hover,
+.hero-tour-button:focus-visible {
+    transform: scale(1.05);
+}
+
+/* centre the button near the bottom of the hero */
+.hero .container {
+    /* already: display:flex; flex-direction:column; justify-content:flex-end; align-items:center; */
+}
+
+@media (max-width: 768px) {
+    .hero-tour-button img {
+        width: 160px;           /* smaller on tablets/phones */
+    }
+}
 /* Sections */
 .section {
     padding: 5rem 0;

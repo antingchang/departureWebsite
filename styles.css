@@ -271,16 +271,16 @@ a:focus {
     margin: 2rem auto 0;  /* space above, centred horizontally        */
     border: none;
 }
-/* People Section */
+/* Artists Section */
 
-.people-content {
+.artists-content {
     max-width: 1067px;
     margin: 0 auto;
     text-align: left;
 }
 
-#people {
-    background-image: url('assets/images/Masumi.jpg');
+#artists {
+    background-image: url('assets/images/Artists.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -288,7 +288,7 @@ a:focus {
     position: relative;
 }
 
-#people::before {
+#artists::before {
     content: '';
     position: absolute;
     top: 0;
@@ -299,12 +299,12 @@ a:focus {
     z-index: 1;
 }
 
-#people .container {
+#artists .container {
     position: relative;
     z-index: 2;
 }
 
-.people-content p {
+.artists-content p {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
     color: #B5B5B5;
@@ -313,7 +313,7 @@ a:focus {
 }
 
 
-.people-content a:hover {
+.artists-content a:hover {
     color: #B5B5B5;
 }
 

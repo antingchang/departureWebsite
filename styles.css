@@ -418,6 +418,12 @@ a:focus {
         padding: 6rem 0;    /* still more generous than the old 5rem 0 */
     }
 }
+/* Keep the grids from “compressing” the section height */
+#tour .container,
+#contact .container {
+    min-height: 60vh;       /* 60% of the viewport height */
+}
+
 /* Footer */
 .footer {
     background: var(--primary-black);

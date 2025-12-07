@@ -170,6 +170,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const originalText = heroTitle.textContent;
         typeWriter(heroTitle, originalText, 50);
     }
+    // Ensure form redirect (_next) works correctly on GitHub Pages subpaths
+    const nextInput = document.querySelector('.contact-form input[name="_next"]');
+    if (nextInput) {
+        const absoluteNext = `${window.location.origin}${window.location.pathname}#contact?sent=1`;
+        nextInput.value = absoluteNext;
+    }
 });
 
 // Add CSS for mobile menu

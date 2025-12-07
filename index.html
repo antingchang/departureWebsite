@@ -156,11 +156,33 @@
             <div class="container">
                 <h2 class="section-title">Contact</h2>
                 <div class="contact-content">
-                    <p>Please get in touch with us at <a href="mailto:hello@departureperformance.com">hello@departureperformance.com</a></p>
+                    <p>Please get in touch with us at <a href="mailto:hello@departureperformance.com">hello@departureperformance.com</a> or fill out the contact form below.</p>
+                    <form class="contact-form" action="https://formsubmit.co/hello@departureperformance.com" method="POST">
+                        <!-- FormSubmit settings -->
+                        <input type="hidden" name="_subject" value="New message from Departure website">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="/#contact?sent=1">
+                        <!-- Honeypot -->
+                        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+                        <label for="contact-name">Name</label>
+                        <input id="contact-name" type="text" name="name" placeholder="Your name" required>
+
+                        <label for="contact-email">Email</label>
+                        <input id="contact-email" type="email" name="email" placeholder="Your email" required>
+
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" name="message" placeholder="Your message" rows="6" required></textarea>
+
+                        <button type="submit" class="btn-primary">Submit</button>
+                    </form>
+                    <div class="form-status" role="status" aria-live="polite"></div>
+                    <br>
                     <p><strong><a href="https://www.masumisaito.com/" target="_blank">Masumi Saito</a></strong></p>
                    <a href="https://www.instagram.com/hello_masumisaito/">
                     <img src="assets/images/instagram.png"></a></p>
-                        <br>
+                        
                         <p><strong><a href="https://www.anting.co.uk/" target="_blank">An-Ting</a></strong></p>
                    <a href="https://www.instagram.com/antingpig/">
                     <img src="assets/images/instagram.png"></a>

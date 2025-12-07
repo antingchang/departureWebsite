@@ -62,43 +62,51 @@ window.addEventListener('scroll', () => {
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+        const name = (this.querySelector('input[name="name"]')?.value || '').trim();
+        const email = (this.querySelector('input[name="email"]')?.value || '').trim();
+        const message = (this.querySelector('textarea[name="message"]')?.value || '').trim();
         
-        // Get form data
-        const formData = new FormData(this);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
-        
-        // Simple validation
         if (!name || !email || !message) {
+            e.preventDefault();
             alert('Please fill in all fields');
             return;
         }
         
-        // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
+            e.preventDefault();
             alert('Please enter a valid email address');
             return;
         }
         
-        // Simulate form submission
         const submitBtn = this.querySelector('.btn-primary');
-        const originalText = submitBtn.textContent;
-        
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        
-        // Simulate API call
-        setTimeout(() => {
-            alert('Thank you for your message! We\'ll get back to you soon.');
-            this.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 2000);
+        if (submitBtn) {
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+        }
+        // Allow the form to submit to the external endpoint
     });
 }
+
+// Show success message after redirect from form provider
+(function showFormStatusFromUrl() {
+    const statusEl = document.querySelector('.form-status');
+    if (!statusEl) return;
+    
+    let query = '';
+    if (window.location.hash && window.location.hash.includes('?')) {
+        query = window.location.hash.split('?')[1];
+    } else {
+        query = window.location.search.slice(1);
+    }
+    const params = new URLSearchParams(query);
+    if (params.get('sent') === '1') {
+        statusEl.textContent = 'Thank you for your message. We\'ll be in touch soon.';
+        // Clean up URL
+        const base = window.location.pathname + '#contact';
+        history.replaceState({}, document.title, base);
+    }
+})();
 
 // Add hover effects to team members
 document.querySelectorAll('.team-member').forEach(member => {

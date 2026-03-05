@@ -41,6 +41,7 @@ body {
 a,
 a:visited {
     color: #FFFFFF;      /* white links everywhere */
+    text-decoration: none;
 }
 
 a:hover,
@@ -188,6 +189,159 @@ a:focus {
     text-shadow: 1px 1px 37px rgba(0,0,0,0.9), 2px 2px 4px rgba(0,0,0,0.8);
 }
 
+/* Two-column layout (Lost Communications style) */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.two-col__left {
+    position: sticky;
+    top: 6rem;
+}
+
+.two-col__left .section-title {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #B5B5B5;
+    line-height: 1.6;
+    font-style: italic;
+    text-shadow: 1px 1px 37px rgba(0,0,0,0.9), 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.section-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #B5B5B5;
+    font-weight: 500;
+}
+
+/* Metadata grid (credits, details) */
+.meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.meta-label {
+    color: #888;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+}
+
+.meta-value {
+    color: #D9D9D9;
+    font-size: 0.85rem;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.supported-by {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #888;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .two-col {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .two-col__left {
+        position: static;
+    }
+}
+
+/* Subsection tagline */
+.subsection-tagline {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #D9D9D9;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    text-shadow: 1px 1px 37px rgba(0,0,0,0.9), 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Side images in two-col left */
+.side-image {
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    border-radius: 4px;
+}
+
+/* Reviews section background */
+#reviews {
+    background-image: url('assets/images/Music.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#reviews::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+#reviews .container {
+    position: relative;
+    z-index: 2;
+}
+
+.reviews-content blockquote {
+    margin: 0 0 2rem 0;
+    padding: 0;
+    border: none;
+}
+
+.reviews-content blockquote p {
+    font-size: 1rem;
+    color: #D9D9D9;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.reviews-content blockquote cite {
+    font-size: 0.75rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-style: normal;
+}
+
+.reviews-content blockquote cite a {
+    color: #B5B5B5;
+    text-decoration: underline;
+}
+
+.reviews-content blockquote cite a:hover {
+    color: #fff;
+}
+
 /* About Section */
 .about-content {
     max-width: 1067px;
@@ -322,39 +476,17 @@ a:focus {
 .tour-content {
     max-width: 1067px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 #tour {
-    background-image: url('assets/images/Music.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     position: relative;
-}
-
-#tour::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-}
-
-#tour .container {
-    position: relative;
-    z-index: 2;
 }
 .tour-content p {
-    font-size: 1.25rem;
+    font-size: 0.95rem;
     margin-bottom: 1.5rem;
     color: #B5B5B5;
     line-height: 1.8;
-    text-shadow: 1px 1px 37px rgba(0,0,0,0.9), 2px 2px 4px rgba(0,0,0,0.8);
 }
 
 
